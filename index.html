@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking form</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main_body">
+        <h1> <span>S</span>alon de <span>S</span>tyle</h1>
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <div class="layout">
+                <h2> Booking Form </h2>
+                <input type="text" id="name" placeholder="Enter your name" required><br>
+                <input type="email" id="email" placeholder="Enter your email id" required><br>
+                <input type="text" id="service" placeholder="Enter the service you want" required><br>
+                <input type="date" id="date" placeholder="" required>
+                <input type="time" id="time" placeholder="" required>
+                <br>
+                <input type="phone" id="phone" placeholder="Enter your mobile number" required><br>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+                Email.send({
+            Host : "smtp.gmail.com",
+            Username : "",
+            Password : "",
+            To : 'ravi7.bachu@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Appointment",
+            Body : "Name: "+ document.getElementById("name").value 
+                    + "<br> Service: "+ document.getElementById("service").value
+                    + "<br> Date: "+ document.getElementById("date").value + " Time: "+document.getElementById("time").value
+                    + "<br> Phone: "+document.getElementById("phone").value,
+        }).then(
+        message => alert("Booking completed successfully")
+        );
+    }
+</script>
+</body>
+</html>

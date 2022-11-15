@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("contact_bg.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    max-height: 100hv;
+}
+.main_body{
+    width: 100%;
+    height: 100hv;
+    max-height: 100hv;
+}
+.main_body h1{
+    text-align: center;
+    margin-left: -5%;
+    padding-top: 15px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: 300s;
+}
+.main_body h1 span{
+    color: rgba(26, 159, 123);
+}
+.layout{
+    width: 30%;
+    height: 75vh;
+    background-color: rgb(235, 244, 246);
+    border-radius: 10px;
+    margin-left: 33%;
+    margin-top: 30px;
+    
+}
+.layout h2{
+    text-align: center;
+    padding-top: 25px;
+    font-weight: 200;
+    font-size: 25px;
+    margin-right: 10px;
+}
+.layout input{
+    border: 0;
+    margin-top: 20px;
+    margin-left: 1px;
+    padding: 12px;
+    padding-right: 25px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 15px;
+}
+.layout input:hover{
+    border-bottom: 1px solid black;
+    transition: ease-in 0.5s;
+}
+.layout button{
+    margin-top: 20px;
+    margin-left: 35%;
+    padding: 15px;
+    width: 100px;
+    background-color: #ff6d79;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 10;
+    cursor: pointer;
+    
+}
+@media(max-width: 900px){
+    .layout{
+        width: 85%;
+        height: 60vh;
+        margin-top: 80px;
+        margin-left: 30px;
+    }
+    .layout button{
+        margin-top: 50px;
+        padding: 5%;
+    }
+}
